@@ -1,0 +1,263 @@
+#validatie img {
+    height: 1em;
+    width: auto;
+    border: 0;
+    margin: 0 .3em;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+html, body, h3 {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header{padding: 2em;}
+header, aside {
+    background-color: rgba(100, 220, 255, 0.5);
+}
+h1, h3 {font-family: 'PT Sans';}
+h1, .tagline{color: #47a;}
+
+section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding-bottom: .2em;
+}
+
+.getal {
+    background-color: #47a;
+    color: #fff;
+    font-size: 3em;
+    width: 1.2em;
+    text-align: right;
+    padding: .2em;
+}
+article {
+    padding: 1em;
+}
+
+section img {
+    max-width: 100%;
+}
+
+aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+aside h3 {
+    background-color: #47a;
+    padding: 2em 0;
+    color: #fff;
+}
+
+aside a {
+    text-decoration: none;
+    padding: 2em 0;
+    display: block;
+}
+
+aside a:hover{
+    background-color: #47a;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #eee;
+    padding: 2em;
+}
+
+.header{
+    grid-area: kop;
+}
+
+.agenda{
+    grid-area: t1;
+}
+
+.opschrijfboek{
+    grid-area: t2;
+}
+.mensen{
+    grid-area: t3;
+}
+.compositie{
+    grid-area: t4;
+}
+.afwisselen{
+    grid-area: t5;
+}
+.ingewikkeld{
+    grid-area: t6;
+}
+.driedimensionaal{
+    grid-area: t7;
+}
+.witbalans{
+    grid-area: t8;
+}
+.aanweziglicht{
+    grid-area: t9;
+}
+.iso-waarde{
+    grid-area: t10;
+}
+
+aside{
+    grid-area: aside;
+}
+aside a, aside h3{
+    padding-left: 20px;
+}
+footer{
+    grid-area: footer;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "kop kop"
+    "t1 t2"
+    "t3 t4"
+    "afb2 t4"
+    "t5 t6"
+    "afb t6"
+    "afb t6"
+    "t7 t8"
+    "afb3 t8"
+    "t9 t10"
+    "t11 t12"
+    "aside footer"
+
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+    body{
+        display: grid;
+        grid-template-areas: "kop kop"
+        "t1 t2"
+        "t3 t4"
+        "afb2 t4"
+        "t5 t6"
+        "afb t6"
+        "afb t6"
+        "t7 t8"
+        "afb3 t8"
+        "t9 t10"
+        "aside footer";
+
+    }
+
+    .afb3{
+        display: block;
+        background-image: url("../images/putin.jpg");
+        grid-area: afb3;
+        height: 130px;
+    }
+    .afb2{
+        display: block;
+        background-image: url("../images/img2.jpg");
+        grid-area: afb2;
+        height: 130px;
+        object-fit: contain;
+    }
+
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 760px) {
+
+    body{
+        display: grid;
+        grid-template-areas:
+                "kop"
+                "t1"
+                "t2"
+                "t3"
+                "t4"
+                "t5"
+                "t6"
+                "t7"
+                "t8"
+                "t9"
+                "t10"
+                "aside"
+                "footer";
+    }
+
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "kop kop kop"
+        "t1 t2 afb4"
+        "t3 t4 afb4"
+        "t5 t6 t7"
+        "t8 t9 t10"
+        "aside aside footer"
+        ;
+    }
+    .afb{
+        display: none;
+    }
+    .afb2{
+        display: none;
+    }
+    .afb3{
+        display: none;
+    }
+    .afb4{
+        display: block;
+        position: relative;
+        object-fit: cover;
+        background-image: url("../images/afb4.jpg");
+        width: 100%;
+        grid-area: afb4;
+    }
+}
+
+@media screen and (min-width: 1920px){
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+                "kop kop kop kop kop"
+                "t1 t2 t3 t4 t5"
+                "t6 t7 t8 t9 aside"
+                "t10 afb2 afb2 afb2 aside"
+                "footer footer footer footer footer"
+    ;
+    }
+    .afb{
+        display: none;
+    }
+    .afb2{
+        display: block;
+        grid-area: afb2;
+        background-image: url("../images/img2.jpg");
+        background-size: cover;
+    }
+    .afb3{
+        display: none;
+    }
+    .afb4{
+        display: none;
+        position: relative;
+        object-fit: cover;
+        background-image: url("../images/afb4.jpg");
+        width: 100%;
+        grid-area: afb4;
+    }
+}
