@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
 #validatie img {
     height: 1em;
     width: auto;
@@ -5,8 +7,6 @@
     margin: 0 .3em;
 }
 
-
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 html, body, h3 {
     padding: 0;
